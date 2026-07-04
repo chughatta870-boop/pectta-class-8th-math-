@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PECTTA Class 8th Math App</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1E3A8A">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+  <div class="container" id="homeScreen">
+    <h1>📚 PECTTA Class 8th Math</h1>
+    <input type="text" id="studentName" placeholder="Student Name" required>
+    <input type="text" id="rollNo" placeholder="Roll No" required>
+
+    <h3>Chapter Wise Papers</h3>
+    <div class="paper-grid" id="chapterPapers"></div>
+
+    <h3>Full Syllabus Papers</h3>
+    <div class="paper-grid" id="fullPapers"></div>
+  </div>
+
+  <div class="container hidden" id="quizScreen">
+    <div class="header">
+      <h2 id="paperTitle"></h2>
+      <div id="timer">Time: 60:00</div>
+    </div>
+    <div id="questionBox"></div>
+    <button id="submitBtn">Submit Paper</button>
+  </div>
+
+  <div class="container hidden" id="resultScreen">
+    <div id="resultCard">
+      <h1>📊 RESULT CARD</h1>
+      <p><b>Name:</b> <span id="resName"></span></p>
+      <p><b>Roll No:</b> <span id="resRoll"></span></p>
+      <p><b>Paper:</b> <span id="resPaper"></span></p>
+      <hr>
+      <p><b>Total Marks:</b> 100</p>
+      <p><b>Obtained:</b> <span id="resMarks"></span></p>
+      <p><b>Percentage:</b> <span id="resPer"></span>%</p>
+      <p><b>Grade:</b> <span id="resGrade"></span></p>
+      <p><b>Status:</b> <span id="resStatus"></span></p>
+    </div>
+    <button onclick="downloadPDF()">⬇️ Download PDF</button>
+    <button onclick="shareResult()">📤 Share Result</button>
+    <button onclick="goHome()">🏠 Home</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
